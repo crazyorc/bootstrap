@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Defines the LayersCommand class"""
 
 import devpipeline
 
@@ -29,7 +30,7 @@ class LayersCommand(devpipeline.common.GenericTool):
             self.verbosity = True
             self.executor = None
             self.components = None
-            self.targets = None
+            self.layers = None
         else:
             self.verbosity = False
 
