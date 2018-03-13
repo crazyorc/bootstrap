@@ -69,12 +69,9 @@ That's it.  Check the tool documentation for information on what's available.
 
 Common Tools
 ------------
-* configure_ - Prepare an environment for checkout to operate.  This is
-  required before most tools will work.
 * checkout_ - Fetch sources in dependecy order.
 
 
 .. _project configuration: docs/config.rst
-.. _configure: docs/tools/configure.rst
 .. _checkout: docs/tools/checkout.rst
 .. _pip: https://pypi.python.org/pypi/pip
