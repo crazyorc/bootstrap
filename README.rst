@@ -19,21 +19,24 @@ solves and the needs of a yocto project maintainer. This project utilizes the
 devpipeline library and provides a yocto project oriented porcelain.
 
 In particular, bootstrap supports the following features:
-1) Defining required layers (repo + revision) and layer dependencies
-2) Defining project filesystem layout via configuration file
-3) Updating of configuration file - including add/remove layers
+
+#. Defining required layers (repo + revision) and layer dependencies
+#. Defining project filesystem layout via configuration file
+#. Updating of configuration file - including add/remove layers
 
 
 Installation
 ------------
-The simplest way to install is using pip_.
+You must first install devpipeline (devpipeline_).
+
+The simplest way to install is using pip_ (adding the :code:`--user` installs to your home directory).
 
 .. code:: bash
 
     $ cd /path/to/bootstrap
     $ pip install [--user]
 
-If you don't have pip available, you can run :code:`setup.py` directly.
+If you don't have pip available, you can run :code:`setup.py` directly (adding the :code:`--user` installs to your home directory).
 
 .. code:: bash
 
@@ -48,20 +51,11 @@ installing those tools is beyond the scope of this document.
 Using
 -----
 The first thing you'll need to do is write a `project configuration`_.  Once
-you're ready, configure_ a build directory.
+you're ready, checkout_ the project sources.
 
 .. code:: bash
 
-    # configure with default settings
-    $ bs configure
-
-If everything went well, you're ready to build.
-
-.. code:: bash
-
-    # enter whatever directory the configure step used
-    $ cd build
-    # checkout will both pull the package sources and build them
+    # checkout with default settings
     $ bs checkout
 
 That's it.  Check the tool documentation for information on what's available.
@@ -74,4 +68,5 @@ Common Tools
 
 .. _project configuration: docs/config.rst
 .. _checkout: docs/tools/checkout.rst
+.. _devpipeline: https://github.com/snewell/dev-pipeline
 .. _pip: https://pypi.python.org/pypi/pip
