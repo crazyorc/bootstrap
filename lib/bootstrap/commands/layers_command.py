@@ -2,6 +2,7 @@
 
 import devpipeline
 
+
 class LayersCommand(devpipeline.common.GenericTool):
 
     """A bootstrap command that manages layer dependencies"""
@@ -35,7 +36,8 @@ class LayersCommand(devpipeline.common.GenericTool):
     def execute(self, *args, **kwargs):
         parsed_args = self.parser.parse_args(*args, **kwargs)
 
-        self.components = devpipeline.config.config.update_cache(cache_file=parsed_args.cache_file)
+        self.components = devpipeline.config.config.update_cache(
+            cache_file=parsed_args.cache_file)
         if parsed_args.layers:
             self.layers = parsed_args.layers
         else:
@@ -72,4 +74,3 @@ class LayersCommand(devpipeline.common.GenericTool):
             for task in self.tasks:
                 task(config_info)
             self.executor.message("")
-
