@@ -7,7 +7,7 @@ import bootstrap.exec.checkout
 
 
 def _do_help():
-    print("usage: dev-pipeline tool [tool args]")
+    print("usage: bs tool [tool args]")
     print("Arguments:")
     print("\t--help\tDisplay this help")
     print("\t--list\tDisplay available tools")
