@@ -8,6 +8,7 @@ setup(
     package_dir={
         "": "lib"
     },
+    packages=find_packages("lib"),
 
     entry_points={
         "console_scripts": [

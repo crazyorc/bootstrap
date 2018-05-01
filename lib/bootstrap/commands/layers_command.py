@@ -66,12 +66,11 @@ class LayersCommand(devpipeline.common.GenericTool):
         for target in layer_order:
             self.executor.message("  {}".format(target))
             self.executor.message("-" * (4 + len(target)))
-            current = self.components[target]
-            env = devpipeline.common.create_target_environment(current)
 
             config_info["current_target"] = target
-            config_info["current_config"] = current
-            config_info["env"] = env
+            config_info["current_config"] = self.components[target]
+            config_info[target] = {}
+            config_info["env"] = devpipeline.config.env.create_environment(config_info)
             for task in self.tasks:
                 task(config_info)
             self.executor.message("")
